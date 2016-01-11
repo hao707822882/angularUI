@@ -56,6 +56,14 @@ BootStrapStarter.directive("col6", function () {
         templateUrl: "app/bootstrap/template/layer/col6.html"
     }
 })
+BootStrapStarter.directive("col12", function () {
+    return {
+        restrict: 'E',
+        replace: true,
+        transclude: true,
+        templateUrl: "app/bootstrap/template/layer/col12.html"
+    }
+})
 
 /**
  *文字颜色标签
@@ -159,14 +167,46 @@ BootStrapStarter.directive("inline", function () {
 })
 
 
-BootStrapStarter.directive("tab", function () {
+BootStrapStarter.directive("tableComponent", function () {
     return {
         restrict: 'E',
         replace: true,
         transclude: true,
-        templateUrl: "app/bootstrap/template/tab/tab.html"
+        templateUrl: "app/bootstrap/template/tab/tab.html",
     }
 })
+
+
+BootStrapStarter.directive("tableTr", function () {
+    return {
+        restrict: 'E',
+        replace: true,
+        transclude: true,
+        templateUrl: "app/bootstrap/template/tab/tr.html",
+    }
+})
+
+BootStrapStarter.directive("tableTd", function () {
+    return {
+        restrict: 'E',
+        replace: true,
+        transclude: true,
+        templateUrl: "app/bootstrap/template/tab/td.html",
+    }
+})
+BootStrapStarter.directive("tableTh", function () {
+    return {
+        restrict: 'E',
+        replace: true,
+        transclude: true,
+        templateUrl: "app/bootstrap/template/tab/th.html",
+    }
+})
+
+
+/**
+ * 排在一行
+ */
 BootStrapStarter.directive("formInlineHorizontal", function () {
     return {
         restrict: 'E',
@@ -175,6 +215,7 @@ BootStrapStarter.directive("formInlineHorizontal", function () {
         templateUrl: "app/bootstrap/template/form/formInlineHorizontal.html"
     }
 })
+
 BootStrapStarter.directive("formHorizontal", function () {
     return {
         restrict: 'E',
@@ -185,7 +226,7 @@ BootStrapStarter.directive("formHorizontal", function () {
 })
 
 
-BootStrapStarter.directive("email", function () {
+BootStrapStarter.directive("inputItem", function () {
     return {
         restrict: 'E',
         replace: true,
@@ -193,7 +234,8 @@ BootStrapStarter.directive("email", function () {
         scope: {
             id: "@",
             lab: "@",
-            type: "@"
+            type: "@",
+            placeholder: "@"
         },
         templateUrl: "app/bootstrap/template/form/input.html",
     }
@@ -437,10 +479,10 @@ BootStrapStarter.directive("panel", function () {
     return {
         restrict: 'E',
         replace: true,
+        transclude: true,
         scope: {
             "head": "@",
         },
-        transclude: true,
         templateUrl: "app/bootstrap/template/panel/panel.html",
     }
 })
@@ -475,22 +517,22 @@ BootStrapStarter.directive("panelListGroupItem", function () {
     }
 })
 
-BootStrapStarter.directive("tab", function () {
-    return {
-        restrict: 'E',
-        replace: true,
-        scope: {},
-        templateUrl: "app/bootstrap/template/compent/table/table.html",
-        link: function ($scope, $element, $attrs) {
+/*BootStrapStarter.directive("tab", function () {
+ return {
+ restrict: 'E',
+ replace: true,
+ scope: {},
+ templateUrl: "app/bootstrap/template/compent/table/table.html",
+ link: function ($scope, $element, $attrs) {
 
-        },
-        controller: function ($scope, $element, $attrs) {
-            $scope.paginations = ["1", "2", "3", "4", "5", "6"]
-            $scope.click = function () {
-                alert("controller")
-            }
-        }
-    }
-})
+ },
+ controller: function ($scope, $element, $attrs) {
+ $scope.paginations = ["1", "2", "3", "4", "5", "6"]
+ $scope.click = function () {
+ alert("controller")
+ }
+ }
+ }
+ })*/
 
 

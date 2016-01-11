@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="jquery.js"></script>
+    <script src="angular.js"></script>
+    <script src="UIStarterDirective.js"></script>
+</head>
+<body ng-app="Tao">
+<wrapper>
+    <h1>outer</h1>
+    <innerwrapper>
+        <h1>inner</h1>
+    </innerwrapper>
+</wrapper>
+</body>
+<script>
+    var myAppModule = angular.module('Tao', ["t1"]);
+</script>
+</html>
