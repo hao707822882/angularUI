@@ -475,7 +475,7 @@ BootStrapStarter.directive("panelListGroupItem", function () {
     }
 })
 
-BootStrapStarter.directive("tab1", function () {
+BootStrapStarter.directive("tab", function () {
     return {
         restrict: 'E',
         replace: true,
