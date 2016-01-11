@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Tao">
+<head>
+    <meta charset="UTF-8">
+    <title>TaoTaoShop！后台管理</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet"/>
+    <script src="js/jquery.js"></script>
+    <script src="js/angular.js"></script>
+</head>
+<body>
+
+<div class="result" ng-app="app" ng-view ng-controller="myController">
+    <pagination action="click()"></pagination>
+</div>
+<script>
+    var myAppModule = angular.module('Tao', []);
+    myAppModule.controller("myController", function ($scope) {
+        $scope.value = "hello world";
+        $scope.click = function () {
+            alert("click....")
+        };
+    })
+</script>
+</body>
+</html>
