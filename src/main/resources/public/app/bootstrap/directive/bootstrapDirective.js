@@ -171,38 +171,9 @@ BootStrapStarter.directive("tableComponent", function () {
     return {
         restrict: 'E',
         replace: true,
-        transclude: true,
         templateUrl: "app/bootstrap/template/tab/tab.html",
     }
 })
-
-
-BootStrapStarter.directive("tableTr", function () {
-    return {
-        restrict: 'E',
-        replace: true,
-        transclude: true,
-        templateUrl: "app/bootstrap/template/tab/tr.html",
-    }
-})
-
-BootStrapStarter.directive("tableTd", function () {
-    return {
-        restrict: 'E',
-        replace: true,
-        transclude: true,
-        templateUrl: "app/bootstrap/template/tab/td.html",
-    }
-})
-BootStrapStarter.directive("tableTh", function () {
-    return {
-        restrict: 'E',
-        replace: true,
-        transclude: true,
-        templateUrl: "app/bootstrap/template/tab/th.html",
-    }
-})
-
 
 /**
  * 排在一行
@@ -440,10 +411,6 @@ BootStrapStarter.directive("pagination", function () {
     return {
         restrict: 'E',
         replace: true,
-        scope: {
-            "paginationAction": "&",
-            "paginations": "="
-        },
         templateUrl: "app/bootstrap/template/compent/pagination/pagination.html",
         link: function ($scope, $element, $attrs) {
             //初始化数据
@@ -514,6 +481,7 @@ BootStrapStarter.directive("panelListGroupItem", function () {
             "panelListGroupItemClick": "&",
         },
         templateUrl: "app/bootstrap/template/panel/panelListGroupItem.html",
+
     }
 })
 

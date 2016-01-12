@@ -7,18 +7,22 @@
     <link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet"/>
     <script src="js/jquery.js"></script>
     <script src="js/angular.js"></script>
+
+    <script src="app/bootstrap/directive/bootstrapDirective.js"></script>
 </head>
 <body>
 
 <div class="result" ng-app="app" ng-view ng-controller="myController">
-    <pagination action="click()"></pagination>
+    <pagination pagination-action="click($target)" paginations="paginations"></pagination>
 </div>
 <script>
-    var myAppModule = angular.module('Tao', []);
+    var myAppModule = angular.module('Tao', ["bootstrap"]);
     myAppModule.controller("myController", function ($scope) {
         $scope.value = "hello world";
-        $scope.click = function () {
+        $scope.paginations = [1, 2, 3, 4, 5, 6, 7]
+        $scope.click = function (data) {
             alert("click....")
+            console.log(arguments)
         };
     })
 </script>
